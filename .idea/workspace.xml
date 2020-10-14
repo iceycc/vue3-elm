@@ -22,6 +22,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/components/header" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
@@ -35,7 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602645191821</updated>
       <workItem from="1602645195836" duration="9658000" />
-      <workItem from="1602658070729" duration="1148000" />
+      <workItem from="1602658070729" duration="10693000" />
     </task>
     <servers />
   </component>
@@ -52,5 +53,13 @@
     </state>
     <state x="455" y="153" key="SettingsEditor/0.0.1680.1050/1680.-140.2560.1440@0.0.1680.1050" timestamp="1602658053989" />
     <state x="2373" y="131" key="SettingsEditor/0.0.1680.1050/1680.-140.2560.1440@1680.-140.2560.1440" timestamp="1602657034726" />
+    <state x="0" y="0" width="779" height="1050" key="find.popup" timestamp="1602668761147">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="0" y="0" width="779" height="1050" key="find.popup/0.0.1680.1050/1680.-140.2560.1440@0.0.1680.1050" timestamp="1602668761147" />
+    <state x="420" y="243" key="run.anything.popup" timestamp="1602665474649">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="420" y="243" key="run.anything.popup/0.0.1680.1050/1680.-140.2560.1440@0.0.1680.1050" timestamp="1602665474649" />
   </component>
 </project>

@@ -1,25 +1,52 @@
-import {defineComponent,ref} from 'vue';
+import {defineComponent, ref,getCurrentInstance} from 'vue';
 import './style.scss'
 // @ts-ignore
 import HeadTop from '../../components/header/headTop'
-const Header = (props:any)=> <header>嘻嘻嘻{props.title}</header>
+import { cityGuess } from '../../service/getData'
 export default defineComponent({
-    name:'Home',
-    components:{
+    name: 'Home',
+    components: {
         HeadTop
     },
-    setup(){
-        const show = ref(false)
-        setTimeout(()=>{
-            show.value = true
-        },1000)
-        return ()=>(
+    methods: {
+        reload() {
+            window.location.reload()
+        }
+    },
+    setup(props) {
+        const vm:any = getCurrentInstance()
+        const show = ref(true)
+        const inputVal = ref('')
+        const scopedSlots = {
+            logo: () => <span class="head_logo" onClick="reload">ele.me</span>,
+        }
+        cityGuess().then(res=>{
+            console.log(res)
+        })
+        return () => (
             <>
-                <h1>Home</h1>
-                <HeadTop title="主标题"/>
+                <HeadTop headTitle='home' scopedSlots={scopedSlots}>
+                    <button onClick={()=>{
+                        vm.ctx.reload()
+                    }}>刷新</button>
+                </HeadTop>
+                <input onInput={(val:any)=>{
+                    console.log('111---',val.target.value)
+                    inputVal.value = val.target.value
+                }}/>
+                {inputVal.value}
+                <button onClick={()=>{
+                    console.log('1121212121')
+                }}>点击</button>
                 {
-                    show.value ? <Header title="dddd"/> : null
+                    !!show.value && <nav class="city_nav">
+                        <div class="city_tip">
+                            <span>当前定位城市：</span>
+                            <span>定位不准时，请在城市列表中选择</span>
+                        </div>
+                    </nav>
                 }
+
             </>
         )
     }
